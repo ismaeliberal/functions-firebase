@@ -1,18 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user: null
+    };
+  }
+
   render() {
+    const { user } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Figth!!!</h1>
+        {user ? (
+          <button onClick={this.logout}>Log Out</button>
+        ) : (
+          <button onClick={this.login}>Log In</button>
+        )}
+        {user ? (
+          <div>
+            <div className="user-profile">
+              <img alt="asd" src={user.photoURL} />
+            </div>
+          </div>
+        ) : (
+          <div className="wrapper">
+            <p>
+              You must be logged in to see the potluck list and submit to it.
+            </p>
+          </div>
+        )}
       </div>
     );
   }
