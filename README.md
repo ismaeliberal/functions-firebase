@@ -29,7 +29,20 @@ cd functions
 npm install
 ```
 
-8. Deploy de las functions para probar los cambios
+8. Cambiar las variables de `src/configs/constants.js` por las de nuestro proyecto web de firebase.
+
+```js
+const config = {
+  apiKey: "CAMBIAR",
+  authDomain: "CAMBIAR",
+  databaseURL: "CAMBIAR",
+  projectId: "CAMBIAR",
+  storageBucket: "CAMBIAR",
+  messagingSenderId: "CAMBIAR"
+};
+```
+
+9. Deploy de las functions para probar los cambios
 
 ```
 firebase deploy --only functions
