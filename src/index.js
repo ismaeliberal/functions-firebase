@@ -8,6 +8,7 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 import createBrowserHistory from "history/createBrowserHistory";
 import Login from "./features/login";
 import Home from "./features/home";
+import Pj from "./features/pj";
 
 const muiTheme = getMuiTheme({
   appBar: {
@@ -23,6 +24,7 @@ const Root = () => (
       <div>
         <Route path="/login" component={Login} />
         <Route path="/app/home" component={Home} />
+        <Route path="/app/pj" component={Pj} />
         <Redirect from="/" to="/login" />
       </div>
     </Router>
