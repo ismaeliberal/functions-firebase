@@ -4,13 +4,13 @@
 4. Bajarse repositorio del proyecto:
 
 ```
-git clone git@github.com:ismaeliberal/functions-firebase-4v.git
+git clone git@github.com:ismaeliberal/functions-firebase.git
 ```
 
 5. Entrar en la carpeta del proyecto y instalar el CLI de firebase
 
 ```
-cd functions-firebase-4v
+cd functions-firebase
 npm install -g firebase-tools
 ```
 
@@ -24,22 +24,22 @@ firebase use --add
 7. Instalamos las dependencias del proyecto y de las funciones
 
 ```
-yarn install
+npm install
 cd functions
 npm install
 ```
 
-8. Cambiar las variables de `src/configs/constants.js` por las de nuestro proyecto web de firebase.
+8. Crear un fichero con nombre `firebase-config.json` dentro de `src/configs/` con las credenciales de nuestro proyecto y el siguiente formato
 
 ```js
-const config = {
-  apiKey: "CAMBIAR",
-  authDomain: "CAMBIAR",
-  databaseURL: "CAMBIAR",
-  projectId: "CAMBIAR",
-  storageBucket: "CAMBIAR",
-  messagingSenderId: "CAMBIAR"
-};
+{
+  "apiKey": "CAMBIAR",
+  "authDomain": "CAMBIAR",
+  "databaseURL": "CAMBIAR",
+  "projectId": "CAMBIAR",
+  "storageBucket": "CAMBIAR",
+  "messagingSenderId": "CAMBIAR"
+}
 ```
 
 9. Deploy de las functions para probar los cambios

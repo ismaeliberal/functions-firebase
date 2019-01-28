@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, RaisedButton } from "material-ui";
+import { RaisedButton } from "material-ui";
 import { logout } from "../helpers/auth";
 import { firebaseAuth } from "../configs/constants";
 import "./styles.css";
@@ -30,12 +30,10 @@ export default class Home extends React.Component {
   goToStatus = () => this.props.history.push("/app/pj");
 
   render() {
-    const { firebaseUser } = this.state;
     return (
       <div>
         <h1>Home</h1>
         <h3>Welcome</h3>
-        {/*<Avatar src={this.state.firebaseUser.user.photoURL}/>*/}
 
         <div className="bottonTorneo">
           <RaisedButton

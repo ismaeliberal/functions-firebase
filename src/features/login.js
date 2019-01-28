@@ -29,6 +29,7 @@ export default class Login extends React.Component {
       this.props.history.push("/app/home");
       return;
     }
+    this.requestPermission();
 
     firebaseAuth().onAuthStateChanged(user => {
       if (user) {
